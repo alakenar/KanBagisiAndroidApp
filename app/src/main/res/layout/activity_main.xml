@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/adsoyad_edittext_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:drawableStart="@drawable/ic_person"
+        android:ems="10"
+        android:hint="Ad Soyad"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textColor="#74FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/kayitol_button_register"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_button"
+        android:text="Kayıt Ol"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/sifre_edittext_register"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sifre_edittext_register"
+        app:layout_constraintTop_toBottomOf="@+id/sifre_edittext_register" />
+
+    <EditText
+        android:id="@+id/sifre_edittext_register"
+        android:layout_width="347dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:drawableStart="@drawable/ic_lock"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textColor="#74FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/email_edittex_register"
+        app:layout_constraintStart_toStartOf="@+id/email_edittex_register"
+        app:layout_constraintTop_toBottomOf="@+id/email_edittex_register" />
+
+    <EditText
+        android:id="@+id/email_edittex_register"
+        android:layout_width="347dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textColor="#74FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/adsoyad_edittext_register"
+        app:layout_constraintStart_toStartOf="@+id/adsoyad_edittext_register"
+        app:layout_constraintTop_toBottomOf="@+id/adsoyad_edittext_register" />
+
+    <TextView
+        android:id="@+id/zaten_birhesabiniz_var"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Zaten bir hesabınız var mı?"
+        android:textColor="@android:color/tertiary_text_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/kayitol_button_register"
+        app:layout_constraintStart_toStartOf="@+id/kayitol_button_register"
+        app:layout_constraintTop_toBottomOf="@+id/kayitol_button_register" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
