@@ -20,6 +20,8 @@ class LoginActivity: AppCompatActivity() {
 
              Log.d("Login", "E-mail ve şifre ile giriş yapmayı dene: $email/***")
 
+
+
         }
          kayit_ol_textview.setOnClickListener {
              finish()
