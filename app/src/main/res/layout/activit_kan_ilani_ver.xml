@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/il_spinner"
+        android:layout_width="347dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:entries="@array/iller"
+        android:paddingLeft="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/adsoyad_kanilani_edittext"
+        android:layout_width="347dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:ems="10"
+        android:hint="Ad Soyad"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/il_spinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/il_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/il_spinner" />
+
+    <EditText
+        android:id="@+id/hastaneadi_kanilani_edittext"
+        android:layout_width="347dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:ems="10"
+        android:hint="Hastane Adı"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/adsoyad_kanilani_edittext"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/adsoyad_kanilani_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/adsoyad_kanilani_edittext" />
+
+    <Spinner
+        android:id="@+id/kangrubu_spinner"
+        android:layout_width="347dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:paddingLeft="12dp"
+        android:entries="@array/KanGrubu"
+        app:layout_constraintEnd_toEndOf="@+id/hastaneadi_kanilani_edittext"
+        app:layout_constraintStart_toStartOf="@+id/hastaneadi_kanilani_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/hastaneadi_kanilani_edittext" />
+
+    <Button
+        android:id="@+id/kan_ilani_kaydet_button"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:text="Kaydet"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/telefon_no_edittext"
+        app:layout_constraintStart_toStartOf="@+id/telefon_no_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/telefon_no_edittext" />
+
+    <EditText
+        android:id="@+id/telefon_no_edittext"
+        android:layout_width="347dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:ems="10"
+        android:hint="Telefon Numarası"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/kangrubu_spinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/kangrubu_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/kangrubu_spinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

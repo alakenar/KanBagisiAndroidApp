@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "931929417657",
+    "firebase_url": "https://kanbagisi-3f949.firebaseio.com",
+    "project_id": "kanbagisi-3f949",
+    "storage_bucket": "kanbagisi-3f949.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931929417657:android:add23a351f320a9579f868",
+        "android_client_info": {
+          "package_name": "com.example.kanbagisi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931929417657-e7o05gh9dc333bcebmi8987mtvkk0ldk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMBbGNbSy2kHi-7UUHF8FJ1vPkQYEfUxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931929417657-e7o05gh9dc333bcebmi8987mtvkk0ldk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

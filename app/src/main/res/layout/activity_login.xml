@@ -44,7 +44,7 @@
         android:id="@+id/girisyap_button_login"
         android:layout_width="347dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button"
         android:text="Giriş yap"
         android:textColor="@android:color/white"

@@ -17,8 +17,19 @@
             </intent-filter>
         </activity>
             <activity android:name=".LoginActivity">
+        </activity>
 
-            </activity>
+             <activity android:name=".HomepageActivity">
+        </activity>
+
+              <activity android:name=".KanilanlariActivity">
+        </activity>
+
+              <activity android:name=".KanilaniVerActivity">
+        </activity>
+
+        <activity android:name=".İlanDetayiActivity">
+        </activity>
 
        </application>
 
