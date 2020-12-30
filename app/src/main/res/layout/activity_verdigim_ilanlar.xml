@@ -11,10 +11,9 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title="Kan İlanları"
+        app:title="Verdiğim İlanlar"
         app:titleTextColor="@color/colorAccent"
         />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

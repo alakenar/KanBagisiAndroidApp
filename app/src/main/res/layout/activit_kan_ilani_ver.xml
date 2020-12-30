@@ -5,15 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Kan İlanı Ver"
+        app:titleTextColor="@color/colorAccent" />
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/il_spinner"
         android:layout_width="347dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:entries="@array/iller"
         android:paddingLeft="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,28 +34,26 @@
         android:layout_width="347dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:ems="10"
         android:hint="Ad Soyad"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/il_spinner"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/il_spinner"
-        app:layout_constraintTop_toBottomOf="@+id/il_spinner" />
+        app:layout_constraintEnd_toEndOf="@+id/kangrubu_spinner"
+        app:layout_constraintStart_toStartOf="@+id/kangrubu_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/kangrubu_spinner" />
 
     <EditText
         android:id="@+id/hastaneadi_kanilani_edittext"
         android:layout_width="347dp"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_frame"
         android:ems="10"
         android:hint="Hastane Adı"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="@+id/adsoyad_kanilani_edittext"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/adsoyad_kanilani_edittext"
         app:layout_constraintTop_toBottomOf="@+id/adsoyad_kanilani_edittext" />
 
@@ -56,12 +62,12 @@
         android:layout_width="347dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_edittext_register_login"
-        android:paddingLeft="12dp"
+        android:background="@drawable/rounded_frame"
         android:entries="@array/KanGrubu"
-        app:layout_constraintEnd_toEndOf="@+id/hastaneadi_kanilani_edittext"
-        app:layout_constraintStart_toStartOf="@+id/hastaneadi_kanilani_edittext"
-        app:layout_constraintTop_toBottomOf="@+id/hastaneadi_kanilani_edittext" />
+        android:paddingLeft="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/il_spinner"
+        app:layout_constraintStart_toStartOf="@+id/il_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/il_spinner" />
 
     <Button
         android:id="@+id/kan_ilani_kaydet_button"
@@ -69,26 +75,39 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button"
-        android:text="Kaydet"
+        android:text="ilan ver"
         android:textColor="@android:color/white"
-        android:textStyle="bold"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/telefon_no_edittext"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/telefon_no_edittext"
-        app:layout_constraintTop_toBottomOf="@+id/telefon_no_edittext" />
+        app:layout_constraintTop_toBottomOf="@+id/telefon_no_edittext"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/telefon_no_edittext"
         android:layout_width="347dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:ems="10"
         android:hint="Telefon Numarası"
-        android:inputType="number"
+        android:inputType="phone"
         android:paddingLeft="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/kangrubu_spinner"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/kangrubu_spinner"
-        app:layout_constraintTop_toBottomOf="@+id/kangrubu_spinner" />
+        app:layout_constraintEnd_toEndOf="@+id/hastaneadi_kanilani_edittext"
+        app:layout_constraintStart_toStartOf="@+id/hastaneadi_kanilani_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/hastaneadi_kanilani_edittext" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/kan_ilani_kaydet_button"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

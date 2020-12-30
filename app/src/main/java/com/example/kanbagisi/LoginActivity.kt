@@ -8,16 +8,23 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity: AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        auth= FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
+
+
+        sifremi_unuttum.setOnClickListener {
+
+            val intent = Intent(applicationContext, SifremiUnuttumActivity::class.java)
+            startActivity(intent)
+        }
+
 
         kayit_ol_textview.setOnClickListener {
             finish()
@@ -25,8 +32,8 @@ class LoginActivity: AppCompatActivity() {
 
         girisyap_button_login.setOnClickListener {
 
-            val email= email_edittext_login.text.toString()
-            val sifre= sifre_edittex_login.text.toString()
+            val email = email_edittext_login.text.toString()
+            val sifre = sifre_edittex_login.text.toString()
 
             Log.d("Login", "E-mail ve şifre ile giriş yapmayı dene: $email/***")
 
@@ -44,16 +51,7 @@ class LoginActivity: AppCompatActivity() {
                     }.addOnFailureListener { exception ->
                         Toast.makeText(this, exception.localizedMessage, Toast.LENGTH_SHORT).show()
                     }
-
-                    }
-
-
-
+            }
         }
-
     }
-
-
-
-
 }

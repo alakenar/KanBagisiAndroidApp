@@ -5,60 +5,27 @@
     android:id="@+id/itemContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/rounded_listview"
+    android:background="@drawable/rounded_frame"
     android:layout_margin="8dp">
 
 
     <TextView
-        android:id="@+id/il"
+        android:id="@+id/ilanKanGrubu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
         android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
         android:textColor="#000"
-        android:textSize="18sp"/>
-
+        android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/adSoyad"
+        android:id="@+id/ilanİl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="6dp"
-        android:textColor="#000"
-        android:textSize="18sp"/>
-
-
-    <TextView
-        android:id="@+id/hastaneAdi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="6dp"
-        android:textColor="#000"
-        android:textSize="18sp"/>
-
-    <TextView
-        android:id="@+id/kanGrubu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="6dp"
-        android:textColor="#000"
-        android:textSize="18sp"/>
-
-
-    <TextView
-        android:id="@+id/telNo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="6dp"
         android:layout_marginBottom="6dp"
         android:textColor="#000"
-        android:textSize="18sp" />
-
-
+        android:textSize="20sp" />
 
 
 </LinearLayout>

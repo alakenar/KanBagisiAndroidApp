@@ -1,5 +1,6 @@
 package com.example.kanbagisi
 
+import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -9,24 +10,19 @@ import kotlinx.android.synthetic.main.item_ilan.view.*
 
 class ListeViewHolder (val viewGroup: ViewGroup) : RecyclerView.ViewHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.item_ilan , viewGroup, false)) {
 
-    fun bindTo(veriler: Veriler, onClickListener:(Veriler)->Unit) {
+    fun bindTo(veriler: Veriler, onClickListener: (Veriler) -> Unit) {
 
-        itemView.il.text=veriler.il
-        itemView.adSoyad.text=veriler.adsoyad
-        itemView.hastaneAdi.text=veriler.hastaneadi
-        itemView.kanGrubu.text=veriler.kangrubu
-        itemView.telNo.text=veriler.telno
+        itemView.ilanİl.text = veriler.il
+        itemView.ilanKanGrubu.text = veriler.kangrubu
 
-        itemView.itemContainer.setOnClickListener{
-        onClickListener(veriler)
+        itemView.itemContainer.setOnClickListener {
 
+            onClickListener(veriler)
 
-
-
+            }
         }
 
     }
 
-}
 
 

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kanbagisi">
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+
 
     <application
         android:allowBackup="true"
@@ -9,28 +14,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".BaslangicEkraniActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
 
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+
             </intent-filter>
         </activity>
-            <activity android:name=".LoginActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
-             <activity android:name=".HomepageActivity">
-        </activity>
+        <activity android:name=".LoginActivity"></activity>
 
-              <activity android:name=".KanilanlariActivity">
-        </activity>
+        <activity android:name=".HomepageActivity"></activity>
 
-              <activity android:name=".KanilaniVerActivity">
-        </activity>
+        <activity android:name=".KanilanlariActivity"></activity>
 
-        <activity android:name=".İlanDetayiActivity">
-        </activity>
+        <activity android:name=".KanilaniVerActivity"></activity>
 
-       </application>
+        <activity android:name=".İlanDetayiActivity"></activity>
 
-          </manifest>
+        <activity android:name=".VerdigimİlanlarActivity"></activity>
+
+        <activity android:name=".KonumaGoreİlanBulActivity"></activity>
+
+        <activity android:name=".SifremiUnuttumActivity"></activity>
+
+
+
+
+
+    </application>
+
+</manifest>

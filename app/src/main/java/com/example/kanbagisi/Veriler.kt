@@ -10,5 +10,7 @@ class Veriler ( var adsoyad: String="",
                 var kangrubu: String= "",
                 var il: String="",
                 var telno: String="" ,
-                var userId: String=""):Parcelable
+                var userId: String=""):Parcelable {
+
+}
 

@@ -5,16 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/kan_ilani_ver_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Ana Sayfa"
+        app:titleTextColor="@color/colorAccent" />
+
     <Button
         android:id="@+id/kan_ilanlari_button"
         android:layout_width="101dp"
         android:layout_height="99dp"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="146dp"
         android:layout_marginEnd="60dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:text="kan     ilanları"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/konuma_gore_ilan_bul_button"
         app:layout_constraintEnd_toStartOf="@+id/kan_ilani_ver_button"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,66 +41,66 @@
         android:id="@+id/kan_ilani_ver_button"
         android:layout_width="101dp"
         android:layout_height="99dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="146dp"
         android:layout_marginEnd="70dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:text="kan ilanı     ver"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/verdigim_ilanlar_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/kan_ilanlari_button"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/konuma_gore_ilan_bul_button"
         android:layout_width="101dp"
         android:layout_height="99dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:text="konuma  göre ilan   bul"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/nobetci_eczane_button"
+        app:layout_constraintEnd_toStartOf="@+id/verdigim_ilanlar_button"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/kan_ilanlari_button"
         app:layout_constraintTop_toBottomOf="@+id/kan_ilanlari_button" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/verdigim_ilanlar_button"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:text="verdiğim ilanlar"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/kan_bagis_noktalari_button"
         app:layout_constraintEnd_toEndOf="@+id/kan_ilani_ver_button"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/kan_ilani_ver_button"
         app:layout_constraintTop_toBottomOf="@+id/kan_ilani_ver_button" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/nobetci_eczane_button"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:text="nöbetçi eczane"
         app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/kan_bagis_noktalari_button"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/konuma_gore_ilan_bul_button"
+        app:layout_constraintTop_toBottomOf="@+id/konuma_gore_ilan_bul_button" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/kan_bagis_noktalari_button"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_edittext_register_login"
-        android:text="kan merkezleri"
+        android:background="@drawable/rounded_frame"
+        android:text="kan bağış noktaları"
         app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/verdigim_ilanlar_button"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="@+id/verdigim_ilanlar_button"
+        app:layout_constraintTop_toBottomOf="@+id/verdigim_ilanlar_button" />
 
     <Button
         android:id="@+id/button5"
@@ -91,12 +108,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="100dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:text="bildirimler"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintEnd_toEndOf="@+id/nobetci_eczane_button"
+        app:layout_constraintStart_toStartOf="@+id/nobetci_eczane_button"
+        app:layout_constraintTop_toBottomOf="@+id/nobetci_eczane_button" />
 
     <Button
         android:id="@+id/button6"
@@ -104,12 +121,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="100dp"
-        android:background="@drawable/rounded_edittext_register_login"
+        android:background="@drawable/rounded_frame"
         android:text="ayarlar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/kan_bagis_noktalari_button"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@+id/kan_bagis_noktalari_button"
+        app:layout_constraintTop_toBottomOf="@+id/kan_bagis_noktalari_button"
         app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

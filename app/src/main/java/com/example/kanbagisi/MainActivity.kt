@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_ilan.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
 
-       // if (auth.currentUser != null) {
-         //   val i = Intent(this, MainActivity::class.java)
-        //    startActivity(i)
-       // }
+        // if (auth.currentUser != null) {
+          // val i = Intent(this, HomepageActivity::class.java)
+         //   startActivity(i)
+        //  }
 
         zaten_birhesabiniz_var.setOnClickListener {
 
@@ -43,9 +44,9 @@ class MainActivity : AppCompatActivity() {
 
 
             if (email.isEmpty() || sifre.isEmpty()) {
-                Toast.makeText(this, "Lütfen tüm alanları doldurun", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Lütfen tüm alanları doldurun.", Toast.LENGTH_SHORT).show()
             } else if (sifre.length < 6) {
-                Toast.makeText(this, "Şifre en az 6 karakter olmalı", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Şifre en az 6 karakter olmalı.", Toast.LENGTH_SHORT).show()
             } else {
                 kayitOl(email, sifre)
             }

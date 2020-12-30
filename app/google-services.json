@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "931929417657-f0bnp7uv99j766gmq888qdbdq618dv3s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kanbagisi",
+            "certificate_hash": "864a26309ca6ebd330c003eb0eef1139042e55af"
+          }
+        },
+        {
           "client_id": "931929417657-e7o05gh9dc333bcebmi8987mtvkk0ldk.apps.googleusercontent.com",
           "client_type": 3
         }
