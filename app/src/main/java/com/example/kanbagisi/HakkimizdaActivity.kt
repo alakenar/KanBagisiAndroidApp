@@ -13,8 +13,8 @@ class HakkimizdaActivity: AppCompatActivity(){
 
 
         textHakkimizda.text= "Kanat Ol uygulamasının yaratıcısı olarak amacımız insanlara daha hızlı kan ihtiyaçlarına ulaşımını sağlamak. " +
-                "Kan bağışının can kurtardığınjn bilincindeyiz, bu bilinçle çağımıza uygun bir uygulama oluşturduk." +
-                " Her kan bağışının bir can kurtarabileceğini unutma! Yeni bir yaşam şansı için KANAT OL!"
+                "Kan bağışının birçok canı kurtardığının bilincindeyiz, bu bilinçle çağımıza uygun bir uygulama oluşturduk." +
+                "Her kan bağışının bir can kurtarabileceğini unutma! Yeni bir yaşam şansı için KANAT OL!"
         textHakkimizda2.text= "Fikir ve görüşleriniz için kanatolapp@gmail.com adresinden bizlere ulaşabilirsiniz."
 
     }
