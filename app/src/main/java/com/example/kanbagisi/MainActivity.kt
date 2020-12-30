@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
 
-        // if (auth.currentUser != null) {
-          // val i = Intent(this, HomepageActivity::class.java)
-         //   startActivity(i)
-        //  }
+         if (auth.currentUser != null) {
+          val i = Intent(this, HakkimizdaActivity::class.java)
+          startActivity(i)
+          }
 
         zaten_birhesabiniz_var.setOnClickListener {
 

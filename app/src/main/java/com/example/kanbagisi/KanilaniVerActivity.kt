@@ -7,13 +7,15 @@ import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import retrofit2.Call
+import retrofit2.Callback
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activit_kan_ilani_ver.*
 
 class KanilaniVerActivity: AppCompatActivity(){
@@ -73,10 +75,28 @@ class KanilaniVerActivity: AppCompatActivity(){
                 Toast.makeText(this, "Lütfen tüm alanları doldurun", Toast.LENGTH_SHORT).show()
             } else {
                 KanilaniKayitOl(il, adsoyad, hastaneadi, kangrubu,telno)
+                val tokenReference: DatabaseReference = database.getReference("Tokens")
+                tokenReference.addValueEventListener(object : ValueEventListener {
+                    override fun onCancelled(error: DatabaseError) {
+                    }
+
+                    override fun onDataChange(snapshot: DataSnapshot) {
+
+                        for(snap in snapshot.children){
+
+                            val token = snap.value as String
+
+                            sendNotification(token,adsoyad,"ilan paylaştı")
+
+                        }
+
+                    }
+
+                })
 
             }
 
-            val intent =Intent (this, LauncherActivity:: class.java)
+          /*  val intent =Intent (this, LauncherActivity:: class.java)
             val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT )
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -103,7 +123,7 @@ class KanilaniVerActivity: AppCompatActivity(){
 
             }
 
-            notificationManager.notify(1234, builder.build())
+            notificationManager.notify(1234, builder.build()) */
 
         }
        }
@@ -135,7 +155,50 @@ class KanilaniVerActivity: AppCompatActivity(){
                         }
 
 
+    private fun sendNotification(receiverUserID: String?, name: String?, userComment: String) {
+
+        val tokenReference: DatabaseReference = database.getReference("Tokens")
+        val query = tokenReference.orderByKey().equalTo(receiverUserID)
+        query.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+
             }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (snapShot in dataSnapshot.children) {
+
+                    val token = snapShot.value as String
+
+                    val data = Data(
+                        auth.currentUser!!.uid,
+                        userComment,
+                        "İLAN GÖNDERİLDİ",
+                        receiverUserID
+                    )
+                    val sender = Sender(data, token)
+
+                    RetrofitAPI.api.sendNotification(sender).enqueue(object : Callback<Response> {
+                        override fun onFailure(call: Call<Response>, t: Throwable) {
+                        }
+
+                        override fun onResponse(
+                            call: Call<Response>,
+                            response: retrofit2.Response<Response>
+                        ) {
+                            Log.d("VIEW_MODEL", response.message())
+                        }
+
+                    })
+
+                }
+            }
+
+        })
+
+    }
+
+
+}
 
 
 

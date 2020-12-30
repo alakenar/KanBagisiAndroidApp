@@ -31,8 +31,9 @@ class İlanDetayiActivity : AppCompatActivity() {
 
         val textIlan = findViewById<TextView>(R.id.textIlan)
 
-        textIlan.text= veri?.il.toString()+"ilinde ki"+veri?.hastaneadi.toString()+"yatmakta olan"
-
+        textIlan.text= veri?.il.toString()+","+veri?.hastaneadi.toString()+"'nde yatmakta olan "+veri?.adsoyad.toString()+
+                " adlı hastamız için ACİL "+veri?.kangrubu.toString()+" kana ihtiyaç vardır. Kan bağışında bulunmak isteyenlerin "+
+                veri?.telno.toString()+" telefon numarası ile irtibata geçmesini rica ederiz"
 
         val buttonKonum = findViewById<Button>(R.id.konum_button)
 

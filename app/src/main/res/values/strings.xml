@@ -100,4 +100,7 @@
         <item> 0 Rh+ </item>
       </string-array>
 
+
+    <string name="channel_id" translatable="false">fcm_default_channel</string>
+    <string name="channel_name" translatable="false">Kanat Ol</string>
 </resources>

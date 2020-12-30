@@ -88,8 +88,17 @@ class HomepageActivity : AppCompatActivity() {
 
         }
 
+        val button7 = findViewById<Button>(R.id.hakimizda_button)
 
+        hakimizda_button.setOnClickListener {
+
+            val intent = Intent(this, HakkimizdaActivity::class.java)
+            startActivity(intent)
+
+        }
     }
+
+
 
     private fun getToken() {
 
